@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Import;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @Import({JpaConfig.class, LoginUserAuditorAware.class})
 public class AdminLogicService implements CrudInterface<AdminApiRequest, AdminApiResponse> {
@@ -19,7 +21,7 @@ public class AdminLogicService implements CrudInterface<AdminApiRequest, AdminAp
     @Autowired
     private AdminRepository adminRepository;
 
-    public Header<AdminApiResponse> response (Admin admin) {
+    public Header<AdminApiResponse> response(Admin admin) {
         AdminApiResponse adminApiResponse = AdminApiResponse.builder()
                 .admId(admin.getAdmId())
                 .account(admin.getAccount())
@@ -43,7 +45,10 @@ public class AdminLogicService implements CrudInterface<AdminApiRequest, AdminAp
 
     @Override
     public Header<AdminApiResponse> read(int id) {
-        return null;
+        Optional<Admin> admin = adminRepository.findById(id);
+        return admin.map(newAdmin -> response(newAdmin))
+                .orElseGet(()->Header.ERROR("작동 왜 안 돼!!"));
+
     }
 
     @Override

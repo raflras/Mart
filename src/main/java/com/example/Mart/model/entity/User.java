@@ -17,7 +17,7 @@ import java.util.List;
 @Entity
 @Builder
 @EntityListeners(AuditingEntityListener.class)
-@ToString(exclude = "orderList")
+@ToString(exclude = {"orderList"})
 @Accessors(chain = true)
 public class User {
 

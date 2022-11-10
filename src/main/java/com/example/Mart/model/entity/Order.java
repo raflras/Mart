@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Entity
 @Builder
 @EntityListeners(AuditingEntityListener.class)
-@ToString(exclude = "user")
+@ToString(exclude = {"user","product"})
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -16,7 +16,7 @@ import java.util.List;
 @Entity
 @Builder
 @EntityListeners(AuditingEntityListener.class)
-@ToString(exclude = "orderList")
+@ToString(exclude = {"orderList"})
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
