@@ -20,10 +20,10 @@ import java.util.List;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int prodId;
+    private Integer prodId;
     private String name;
-    private int price;
-    private int qty;
+    private Integer price;
+    private Integer qty;
     @CreatedDate
     private LocalDateTime createdDate;
     @LastModifiedDate

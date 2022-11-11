@@ -18,10 +18,10 @@ import java.time.LocalDateTime;
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int ordId;
+    private Integer ordId;
     private LocalDateTime ordDate;
-    private int totalQty;
-    private int totalPrice;
+    private Integer totalQty;
+    private Integer totalPrice;
     @LastModifiedDate
     private LocalDateTime finalEditAt;
     @LastModifiedBy

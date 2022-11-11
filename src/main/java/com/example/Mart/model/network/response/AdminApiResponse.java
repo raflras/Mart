@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class AdminApiResponse {
-    private int admId;
+    private Integer admId;
     private String account;
     private String password;
-    private int admGrade;
+    private Integer admGrade;
 }

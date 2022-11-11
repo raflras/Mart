@@ -18,10 +18,10 @@ public class Admin {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int admId;
+    private Integer admId;
     private String account;
     private String password;
-    private int admGrade;
+    private Integer admGrade;
     @LastModifiedDate
     private LocalDateTime finalEditAt;
     @LastModifiedBy

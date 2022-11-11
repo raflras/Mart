@@ -12,8 +12,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 public class OrderApiResponse {
-    private int ordId;
+    private Integer ordId;
     private LocalDateTime ordDate;
-    private int totalQty;
-    private int totalPrice;
+    private Integer totalQty;
+    private Integer totalPrice;
 }

@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class ProductApiResponse {
-    private int prodId;
+    private Integer prodId;
     private String name;
-    private int price;
-    private int qty;
+    private Integer price;
+    private Integer qty;
 }

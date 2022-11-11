@@ -10,12 +10,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class UserApiResponse {
-    private int userId;
+    private Integer userId;
     private String account;
     private String password;
     private String name;
     private String phoneNumber;
     private String address;
     private String gender;
-    private int age;
+    private Integer age;
 }
